@@ -4,7 +4,7 @@ t = str(date.today()).split("-")
 month = t[1].replace("0","") if (t[1][0] == "0") else t[1]
 
 todays_date = month + '/' + t[2] + "/" + t[0]
-end_date = "11/22/2022"
+end_date = "3/3/2023"
 
 class DateException(Exception):
     pass
@@ -29,7 +29,7 @@ if (len(todays_date.split("/")) == 3):
     m1, d1, y1 = check_date(todays_date)
     m2, d2, y2 = check_date(end_date)
     days_left = (date(y2, m2, d2) - date(y1, m1, d1)).days
-    print(f"\n{days_left} days left until Thanksgiving break!")
+    print(f"\n{days_left} days left until Spring break!")
     print(f"{days_left/7:.2f} weeks left!")
 
 print(convert_to_min(datetime.now().strftime("%H:%M:%S")))
